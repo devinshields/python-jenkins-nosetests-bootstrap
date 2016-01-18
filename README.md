@@ -54,7 +54,23 @@ Create a Jenkins job and start testing
 
 * here's a [super simple project designed for testing demos](https://github.com/devinshields/testable_python_project)
 
-
 * ??? how to create the config_xml string ???
+
+### Stuck, so let's follow the:
+
+* [setup tutorial for humans](http://www.alexconrad.org/2011/10/jenkins-and-python.html?m=1)
+
+
+Final Product
+-------------
+
+* x...
+
+
+C'est Fin
+---------
+
+* x...
+
 
 
