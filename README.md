@@ -41,3 +41,11 @@ install jenkins & start playing with packages
 * x...
 
 
+```
+brew install jenkins
+
+open http://localhost:8080/
+```
+
+
+
