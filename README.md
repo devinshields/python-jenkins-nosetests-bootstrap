@@ -35,17 +35,26 @@ open CIDI world:
 * [buildbot looks interesting](http://docs.buildbot.net/current/tutorial/firstrun.html)...
 
 
-install jenkins & start playing with packages
+install jenkins & install python's plugins
 ---------------------------------------------
 
-* x...
-
-
 ```
-brew install jenkins
-
-open http://localhost:8080/
+$ brew install jenkins
+$ open http://localhost:8080/
 ```
 
+* install the `git` an d`python` plugins for Jenkins by running:
+
+```
+$ ./jenkins_api_install_git_and_python_plugins.py
+```
+
+Create a Jenkins job and start testing
+---------------------------------------
+
+* here's a [super simple project designed for testing demos](https://github.com/devinshields/testable_python_project)
+
+
+* ??? how to create the config_xml string ???
 
 
