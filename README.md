@@ -78,22 +78,33 @@ refocus on testing - what it possible with automate? (w/screen shots)
 
 
 
-## research complete - redo everything: from scratch, and using only the Jenkins API
+research complete - now redo it al via the API
 -------------------------------------------------------------------------------------
 
-just a simple git repo of python and one job_config.xml file should do it:
+I'm aiming for: a simple git repo of python and one job_config.xml file should do it:
 
 * create python script that queryies for all Jobs
   * forearch, extract and store a Job pickle, or `job_config.xml` file
-
 * delete the existing Jenkins server
   * purge everything - configs, plugins, everything
-
 * create a vanilla Jenkins server from scratch (w/homebrew?)
-
 * install all plugins
-
 * restore all Jenkins Jobs
-
 * trigger one build for each job
+
+
+Jenkin Jobs and Source Control - Backup and Restore
+---------------------------------------------------
+
+a functional work in progress (files in the repo root):
+
+* job_config_backup_via_curl.py
+* job_config_restore_via_curl.py
+
+
+Next Steps
+----------
+
+* gather up the minimum-set of artifacts a user would need to reconstruct a Jenkins Job
+  * cache the formula in a new repo
 
