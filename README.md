@@ -55,22 +55,40 @@ Create a Jenkins job and start testing
 * here's a [super simple project designed for testing demos](https://github.com/devinshields/testable_python_project)
 
 * ??? how to create the config_xml string ???
+  * [found out here](https://www.sghill.net/how-do-i-backup-jenkins-jobs.html)
 
-### Stuck, so let's follow the:
+
+### progress with the API client has slowed down. let's change tack:
 
 * [setup tutorial for humans](http://www.alexconrad.org/2011/10/jenkins-and-python.html?m=1)
 
 
-Final Product
--------------
+Backup and restore a Jenkins Job Configuration
+-----------------------------------------------
 
-* x...
-
-
-C'est Fin
----------
-
-* x...
+* https://www.sghill.net/how-do-i-backup-jenkins-jobs.html
 
 
+-------------------------------------------
+
+
+
+redo everything: from scratch, and using only the Jenkins API
+-------------------------------------------------------------
+
+a git repo of python and one job_config.xml file should do it:
+
+* create python script that queryies for all Jobs
+  * forearch, extract and store a Job pickle, or `job_config.xml` file
+
+* delete the existing Jenkins server
+  * purge everything - configs, plugins, everything
+
+* create a vanilla Jenkins server from scratch (w/homebrew?)
+
+* install all plugins
+
+* restore all Jenkins Jobs
+
+* trigger one build for each job
 
