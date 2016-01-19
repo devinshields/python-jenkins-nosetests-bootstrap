@@ -62,16 +62,12 @@ def install_python_cicd_plugins():
     # get an api client
     jk = get_jenkins_instance()
 
-    # try installing the git and python plugins via the API
-    install_git_plugin_response = jk.install_plugin('git@2.4.1')
-    print '\ninstall_git_plugin_response: {}\n'.format(install_git_plugin_response)
+    # plugin requirements
+    CICD_plugins = ['git@2.4.1', 'python@1.3', 'cobertura@1.9.7', 'violations@0.7.11']
 
-    install_python_plugin_response = jk.install_plugin('python@1.3')
-    print '\ninstall_python_plugin_response: {}\n'.format(install_python_plugin_response)
-
-    install_cobertura_plugin_response = jk.install_plugin('cobertura@1.9.7')
-    print '\ninstall_cobertura_plugin_response: {}\n'.format(install_cobertura_plugin_response)
-
+    for plugin in CICD_plugins:
+        response = jk.install_plugin(plugin)
+        print 'plugin: {}, response: {}'.format(plugin, response)
 
 install_python_cicd_plugins()
 
