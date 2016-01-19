@@ -7,6 +7,9 @@
 #   post xml data with curl:
 #           http://stackoverflow.com/questions/3007253/send-post-xml-file-using-curl-command-line
 #
+#   fixing lack of newline chars in posted xml:
+#          https://benkiew.wordpress.com/2012/01/12/automating-hudsonjenkins-via-rest-and-curl-a-very-small-cookbook/
+#
 
 
 # ------------ #
@@ -34,6 +37,7 @@ echo -e "\n\nJOB_BACKUP_FILE_PATH: $JOB_BACKUP_FILE_PATH\nJOB_BACKUP_NAME: $JOB_
 
 
 # execute the restore
-curl -X POST --header "Content-Type:application/xml" -d @"$JOB_BACKUP_FILE_PATH" "http://localhost:8080/job/$JOB_BACKUP_NAME/config.xml"
+curl -X POST -H "Content-Type: text/xml" --data-binary "@$JOB_BACKUP_FILE_PATH" "http://localhost:8080/job/$JOB_BACKUP_NAME/config.xml"
+
 
 
